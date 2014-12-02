@@ -8,7 +8,7 @@
     <version>0.1</version>
 
     <properties>
-        <!-- Use Java 8 -->
+        <!-- Enable Java 8 -->
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Configure the main class of our Spring Boot application -->
@@ -28,11 +28,17 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <!-- Spring Data MongoDB-->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-mongodb</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
-            <!-- Package our application as an executable jar file -->
+            <!-- Spring Boot Maven Support -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
