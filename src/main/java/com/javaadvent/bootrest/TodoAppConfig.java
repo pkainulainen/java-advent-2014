@@ -19,7 +19,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan("com.javaadvent.bootrest.todo")
+@ComponentScan
 public class TodoAppConfig {
 
     public static void main(String[] args) {
