@@ -1,5 +1,7 @@
 package com.javaadvent.bootrest.todo;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.validation.constraints.Size;
 
 /**
@@ -12,6 +14,7 @@ public class TodoDTO {
     @Size(max = 500)
     private String description;
 
+    @NotEmpty
     @Size(max = 100)
     private String title;
 
