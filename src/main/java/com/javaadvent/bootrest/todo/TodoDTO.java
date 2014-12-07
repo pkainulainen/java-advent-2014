@@ -5,17 +5,20 @@ import org.hibernate.validator.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 /**
+ * This data transfer object contains the information of a single todo
+ * entry and specifies validation rules that are used to ensure that only
+ * valid information can be saved to the used database.
  * @author Petri Kainulainen
  */
-public class TodoDTO {
+public final class TodoDTO {
 
     private String id;
 
-    @Size(max = 500)
+    @Size(max = Todo.MAX_LENGTH_DESCRIPTION)
     private String description;
 
     @NotEmpty
-    @Size(max = 100)
+    @Size(max = Todo.MAX_LENGTH_TITLE)
     private String title;
 
     public TodoDTO() {
@@ -44,5 +47,15 @@ public class TodoDTO {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    @Override
+    public String toString() {
+        return String.format(
+                "TodoDTO[id=%s, description=%s, title=%s]",
+                this.id,
+                this.description,
+                this.title
+        );
     }
 }
