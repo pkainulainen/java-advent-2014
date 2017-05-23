@@ -25,7 +25,7 @@ import static org.mockito.Mockito.when;
  * @author Petri Kainulainen
  */
 @RunWith(MockitoJUnitRunner.class)
-public class MongoDBTodoServiceTest {
+public class MongoDbTodoServiceTest {
 
     private static final String DESCRIPTION = "description";
     private static final String ID = "id";
